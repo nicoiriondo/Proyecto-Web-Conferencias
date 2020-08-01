@@ -587,7 +587,7 @@
                                 }
                             }
                             
-                            div.tabla-precio {
+                            div.tabla-precios {
                                 border: 1px solid #e1e1e1;
                                 background-color: #ffffff;
                                 padding: 40px 0;
@@ -595,13 +595,13 @@
                                 transition: all .3s ease;
                             }
                             
-                            div.tabla-precio:hover {
+                            div.tabla-precios:hover {
                                 transform: scale(1.1);
                                 border: 1px solid #fe4918;
                                 box-shadow: 0px 0px 50px #666;
                             }
                             
-                            div.tabla-precio ul li {
+                            div.tabla-precios ul li {
                                 font-family: 'PT Sans', sans-serif;
                                 font-size: 14px;
                                 margin-bottom: 20px;
@@ -610,7 +610,7 @@
                                 line-height: 26px;
                             }
                             
-                            div.tabla-precio ul li:before {
+                            div.tabla-precios ul li:before {
                                 font-weight: 900;
                                 font-family: 'Font Awesome 5 Free';
                                 display: inline-block;
@@ -628,7 +628,7 @@
                                 text-transform: uppercase;
                             }
                             
-                            div.tabla-precio p.numero {
+                            div.tabla-precios p.numero {
                                 color: black;
                                 margin: 20px 0;
                             }
@@ -844,12 +844,12 @@
                                 }
                             }
                             
-                            div.paquetes .tabla-precio:hover {
+                            div.paquetes .tabla-precios:hover {
                                 transform: none;
                                 box-shadow: none;
                             }
                             
-                            div.paquetes .tabla-precio input {
+                            div.paquetes .tabla-precios input {
                                 clear: both;
                                 width: 100px;
                                 margin: 10px auto 0 auto;
