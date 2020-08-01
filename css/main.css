@@ -844,7 +844,7 @@
                                 }
                             }
                             
-                            div.paquetes tabla-precio:hover {
+                            div.paquetes .tabla-precio:hover {
                                 transform: none;
                                 box-shadow: none;
                             }
