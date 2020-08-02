@@ -858,6 +858,7 @@
                             
                             .contenido-dia {
                                 padding: 20px;
+                                display: none;
                             }
                             
                             @media only screen and (min-width: 768px) {
@@ -915,6 +916,29 @@
                             .resumen input {
                                 display: block;
                                 margin: 10px auto;
+                            }
+                            
+                            #lista-productos {
+                                background-color: #e1e1e1;
+                                padding: 20px;
+                                display: none;
+                            }
+                            
+                            #suma-total {
+                                text-align: center;
+                                color: #fe4918;
+                                font-size: 2em;
+                            }
+                            
+                            input:disabled .button {
+                                opacity: .5;
+                            }
+                            
+                            #error {
+                                clear: both;
+                                padding: 20px;
+                                text-align: center;
+                                display: none;
                             }
                             /* ==========================================================================
    Helper classes
