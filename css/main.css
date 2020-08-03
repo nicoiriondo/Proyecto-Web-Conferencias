@@ -414,8 +414,6 @@
                             
                             nav.menu-programa {
                                 width: 100%;
-                                border-bottom: 1px solid #fe4918;
-                                padding-bottom: 10px;
                             }
                             
                             @media only screen and (min-width: 768px) {
@@ -432,6 +430,24 @@
                                 font-family: 'Oswald', sans-serif;
                                 margin-bottom: 10px;
                                 font-size: 1.2em;
+                                position: relative;
+                                padding-bottom: 10px;
+                                border-bottom: 1px solid #fe4918;
+                            }
+                            
+                            nav.menu-programa a.activo::after {
+                                position: absolute;
+                                content: '';
+                                left: 0;
+                                right: 0;
+                                margin-left: auto;
+                                margin-right: auto;
+                                height: 20px;
+                                width: 30px;
+                                background-image: url(../img/talleres-flecha.jpg);
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                bottom: -20px;
                             }
                             
                             @media only screen and (min-width: 768px) {
@@ -445,6 +461,10 @@
                                 color: #fe4918;
                                 font-size: 1.5em;
                                 margin-right: 10px;
+                            }
+                            
+                            div.ocultar {
+                                display: none;
                             }
                             /** detalle evento **/
                             

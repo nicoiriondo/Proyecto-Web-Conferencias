@@ -157,3 +157,24 @@
 
     }); //Dom content loaded
 })();
+
+
+$(function() {
+
+    //PRogama de Conferencias
+    $('.programa-evento .info-curso:first').show();
+    $('.menu-progama a:first').addClass('activo');
+
+
+    $('.menu-programa a').on('click', function() {
+        $('.menu-progama a').removeClass('activo');
+        $(this).addClass('activo');
+        $('.ocultar').hide();
+
+        var enlace = $(this).attr('href');
+        $(enlace).fadeIn(1000);
+        return false;
+
+    })
+
+});
