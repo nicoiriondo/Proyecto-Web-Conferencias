@@ -38,11 +38,10 @@
         var camisas = document.getElementById('camisa_evento');
         var etiquetas = document.getElementById('etiquetas');
 
+        // Menu Movil
 
-
-
-
-        calcular.addEventListener('click', calcularMontos);
+        var menu_movil = document.getElementsByClassName("menu-movil");
+        var navegacion_principal = document.getElementsByClassName("navegacion-principal");
 
         pase_dia.addEventListener('blur', mostrarDias);
         pase_dosdias.addEventListener('blur', mostrarDias);
@@ -52,6 +51,12 @@
         apellido.addEventListener('blur', validarCampos);
         email.addEventListener('blur', validarCampos);
         email.addEventListener('blur', validarMail);
+
+        /*
+                function mostrarMenu() {
+                    navegacion_principal.style.display = 'block';
+                    console.log('hola');
+                } */
 
         function validarCampos() {
 
