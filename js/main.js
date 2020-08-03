@@ -4,17 +4,6 @@
 
     document.addEventListener('DOMContentLoaded', function() {
 
-
-        var map = L.map('mapa').setView([-34.919332, -54.917908], 14);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        L.marker([-34.919332, -54.917908]).addTo(map)
-            .bindPopup('Centro de Convenciones de Punta del Este.')
-            .openPopup();
-
         // Campos datos de usuarios 
 
         var nombre = document.getElementById('nombre');
@@ -38,10 +27,7 @@
         var camisas = document.getElementById('camisa_evento');
         var etiquetas = document.getElementById('etiquetas');
 
-        // Menu Movil
-
-        var menu_movil = document.getElementsByClassName("menu-movil");
-        var navegacion_principal = document.getElementsByClassName("navegacion-principal");
+        calcular.addEventListener('click', calcularMontos);
 
         pase_dia.addEventListener('blur', mostrarDias);
         pase_dosdias.addEventListener('blur', mostrarDias);
@@ -52,11 +38,7 @@
         email.addEventListener('blur', validarCampos);
         email.addEventListener('blur', validarMail);
 
-        /*
-                function mostrarMenu() {
-                    navegacion_principal.style.display = 'block';
-                    console.log('hola');
-                } */
+
 
         function validarCampos() {
 
@@ -133,7 +115,7 @@
 
         }
 
-        function mostrarDias(event) {
+        function mostrarDias() {
             var boletosDia = parseInt(pase_dia.value, 10) || 0,
                 boletos2Dias = parseInt(pase_dosdias.value, 10) || 0,
                 boletoCompleto = parseInt(pase_completo.value, 10) || 0;
