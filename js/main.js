@@ -103,14 +103,14 @@
                     listadoProductos.push(cantEtiquetas + ' Etiquetas');
 
                 }
-                lista_productos.style.display = "block";
+                lista_productos.style.display = 'block';
                 lista_productos.innerHTML = '';
 
                 for (var i = 0; i < listadoProductos.length; i++) {
                     lista_productos.innerHTML += listadoProductos[i] + '<br/>';
                 }
 
-                suma.innerHTML = "$ " + totalPagar.toFixed[2];
+                suma.innerHTML = "$ " + totalPagar.toFixed(2);
             }
 
         }
