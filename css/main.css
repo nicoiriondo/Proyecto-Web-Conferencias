@@ -193,6 +193,55 @@
                             .float-right {
                                 float: right;
                             }
+                            /** Lettering **/
+                            
+                            h1.nombre-sitio span {
+                                position: relative;
+                                text-shadow: 0 0 30px black;
+                            }
+                            
+                            @media only screen and (min-width: 992px) {
+                                .char1 {
+                                    top: 20px;
+                                    right: 20px;
+                                }
+                                .char2 {
+                                    top: 0px;
+                                    left: -20px;
+                                }
+                                .char3 {
+                                    top: 10px;
+                                    right: 20px;
+                                }
+                                .char4 {
+                                    top: 5px;
+                                    left: -20px;
+                                }
+                                .char5 {
+                                    top: 15px;
+                                    right: 10px;
+                                }
+                                .char6 {
+                                    top: 5px;
+                                    left: 10px;
+                                }
+                                .char7 {
+                                    top: 20px;
+                                    right: -10px;
+                                }
+                                .char8 {
+                                    top: 0px;
+                                    left: 10px;
+                                }
+                                .char9 {
+                                    top: 10px;
+                                    right: -20px;
+                                }
+                                .char10 {
+                                    top: 20px;
+                                    right: -40px;
+                                }
+                            }
                             /** Header **/
                             
                             div.hero {
@@ -274,6 +323,10 @@
                                 font-family: 'PT Sans', sans-serif;
                             }
                             
+                            .nombre-sitio {
+                                padding-bottom: 40px;
+                            }
+                            
                             @media only screen and (min-width: 768px) {
                                 h1.nombre-sitio {
                                     font-size: 11.5vw;
@@ -282,6 +335,14 @@
                                 }
                             }
                             /** Barra **/
+                            
+                            .fixed {
+                                position: fixed;
+                                width: 100%;
+                                top: 0;
+                                left: 0;
+                                z-index: 2;
+                            }
                             
                             div.barra {
                                 background-color: #353535;
@@ -306,6 +367,7 @@
                             
                             nav.navegacion-principal {
                                 display: none;
+                                width: 100%;
                             }
                             
                             nav.navegacion-principal a {
@@ -824,6 +886,16 @@
                                 padding: 10px 0;
                             }
                             /** Internas **/
+                            /** Conferencia **/
+                            
+                            body.conferencia .navegacion-principal .activo {
+                                border-bottom: 2px solid #fe4918;
+                            }
+                            
+                            div.galeria a {
+                                display: inline-block;
+                                margin-bottom: 5px;
+                            }
                             /** REgistros **/
                             
                             form.registro h3 {

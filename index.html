@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=PT+Sans&display=swap" rel="stylesheet">
@@ -43,7 +44,7 @@
                         <p class="ciudad"><i class="fas fa-map-marker-alt"></i> Punta del Este, UY</p>
                     </div>
 
-                    <h1 class="nombre-sitio">PdeWebCamp</h1>
+                    <h1 class="nombre-sitio fancy_title">PdeWebCamp</h1>
                     <p class="slogan">La mejor conferencia de <span>diseño web</span> </p>
 
                 </div>
@@ -66,7 +67,7 @@
             </div>
 
             <nav class="navegacion-principal clearfix">
-                <a href="">Conferencia</a>
+                <a href="conferencia.html">Conferencia</a>
                 <a href="">Calendario</a>
                 <a href="">Invitados</a>
                 <a href="registro.html">Reservaciones</a>
@@ -210,16 +211,16 @@
         <div class="contenedor">
             <ul class="resumen-evento clearfix">
                 <li>
-                    <p class="numero">6</p> Invitados
+                    <p class="numero"></p> Invitados
                 </li>
                 <li>
-                    <p class="numero">15</p> Talleres
+                    <p class="numero"></p> Talleres
                 </li>
                 <li>
-                    <p class="numero">3</p> Dias
+                    <p class="numero"></p> Dias
                 </li>
                 <li>
-                    <p class="numero">9</p> Conferencias
+                    <p class="numero"></p> Conferencias
                 </li>
             </ul>
 
@@ -330,13 +331,13 @@
         <div class="cuenta-regresiva contenedor">
             <ul class="clearfix">
                 <li>
-                    <p class="numero">88</p> dias</li>
+                    <p id="dias" class="numero"></p> dias</li>
                 <li>
-                    <p class="numero">16</p> horas</li>
+                    <p id="horas" class="numero"></p> horas</li>
                 <li>
-                    <p class="numero">45</p> minutos</li>
+                    <p id="minutos" class="numero"></p> minutos</li>
                 <li>
-                    <p class="numero">12</p> segundos</li>
+                    <p id="segundos" class="numero"></p> segundos</li>
             </ul>
         </div>
     </section>
@@ -382,6 +383,10 @@
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/mapa.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.lettering.js"></script>
+    <script src="js/lightbox.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
