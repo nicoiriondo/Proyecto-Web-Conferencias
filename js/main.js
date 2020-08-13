@@ -27,6 +27,9 @@
         var camisas = document.getElementById('camisa_evento');
         var etiquetas = document.getElementById('etiquetas');
 
+
+        botonRegistro.disabled = true;
+
         if (document.getElementById('calcular')) {
             calcular.addEventListener('click', calcularMontos);
 
@@ -114,6 +117,8 @@
                     }
 
                     suma.innerHTML = "$ " + totalPagar.toFixed(2);
+                    botonRegistro.disabled = false;
+                    document.getElementById('total_pedido').value = totalPagar;
                 }
 
             }
@@ -152,6 +157,13 @@ $(function() {
 
     $('.nombre-sitio').lettering();
 
+    // Agregar clase a menu
+
+    $('body.conferencia .navegacion-principal a:contains("Conferencia")').addClass('activo');
+    $('body.calendario .navegacion-principal a:contains("Calendario")').addClass('activo');
+    $('body.invitados .navegacion-principal a:contains("Invitados")').addClass('activo');
+
+
     // Menu - fijo 
     var windowHeight = $(window).height();
     var barraAltura = $('.barra').innerHeight();
@@ -184,14 +196,14 @@ $(function() {
 
 
     $('.menu-programa a').on('click', function() {
-        $('.menu-progama a').removeClass('activo');
+        $('.menu-programa a').removeClass("activo");
         $(this).addClass('activo');
+
         $('.ocultar').hide();
 
         var enlace = $(this).attr('href');
         $(enlace).fadeIn(1000);
         return false;
-
     });
 
     // Animaciones para los numeros
@@ -213,6 +225,12 @@ $(function() {
 
         });
 
+    // Colorbox
+
+    var validarMenu = true;
+    if (validarMenu) {
+        $('.invitado-info').colorbox({ inline: true, width: "%50" });
+    }
 
 
 
