@@ -1,28 +1,61 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="stylesheet" href="css/estilos.css">
-  </head>
-  <body>
-      <div class="formulario">
-            <h2>Pagos con Paypal</h2>
-            <?php
-                $resultado = (bool) $_GET['exito'];
-                $paymentId = $_GET['paymentId'];
-    
 
-                if($resultado == true) {
-                      echo "El pago se realizo correctamente! ";
-                      echo "El id es {$paymentId} ";
-                }
-            
-             ?>
-        </div>
-  </body>
-  
-  
-</html>
+<?php include_once 'includes/templates/header.php';
+use PayPal\Api\Payment;
+use PayPal\Api\PaymentExecution;
+use PayPal\Rest\ApiContext;
+
+require 'includes/paypal.php';
+
+
+
+?>
+<section class="seccion contenedor">
+  <h2>Resumen Registro</h2>
+  <?php
+ 
+            $paymentId = $_GET['paymentId'];
+            $id_pago = (int) $_GET['id_pago'];
+
+            // Peticion a REST API
+
+            $pago = Payment::get($paymentId, $apiContext);
+            $execution = new PaymentExecution();
+            $execution -> setPayerId($_GET['PayerID']);
+
+            //Resultado tiene la informacion de la transaccion
+            $resultado = $pago-> execute($execution, $apiContext);
+
+
+            $respuesta =  $resultado->$transactions[0]->related_resources[0]->sale->state;
+
+
+            if ($respuesta == "completed") {
+              echo "<div class='resultado correcto'>";
+              echo "El pago se realizo correctamente! ";
+              echo "El id es {$paymentId} ";
+              echo "</div>";
+
+              require_once('includes/funciones/bd_conexion.php');
+              $stmt = $conn -> prepare('UPDATE registrados SET pagado = ? WHERE id_registado = ?');
+              $pagado = 1 ;
+              $stmt -> bind_param("ii",$pagado, $id_pago );
+              $stmt->execute();
+              $stmt->close();
+              $conn->close();
+              
+              
+            } else {
+              echo "<div class='resultado error'>";
+              echo "El pago no se realizo";
+              echo "</div>";
+            }
+
+
+
+  ?>
+
+
+</section>
+
+
+<?php include_once 'includes/templates/footer.php'; ?>
