@@ -7,11 +7,7 @@
             </div>
             <div class="ultimos-tweets">
                 <h3>Ultimos <span>Tweets</span></h3>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                </ul>
+                <a class="twitter-timeline" data-lang="es" data-height="400" href="https://twitter.com/pdewebcamp?ref_src=twsrc%5Etfw">Tweets by pdewebcamp</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
             <div class="menu">
                 <h3>REdes <span>Sociales</span></h3>
@@ -72,7 +68,15 @@
         ga('send', 'pageview')
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async></script>
-
+    <?php
+	// Guarda todo el contenido a un archivo
+	$fp = fopen($archivoCache, 'w');
+	fwrite($fp, ob_get_contents());
+	fclose($fp);
+	// Enviar al navegador
+	ob_end_flush();
+?>
 </body>
 
 </html>
+
